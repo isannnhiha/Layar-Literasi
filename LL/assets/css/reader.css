@@ -1,0 +1,234 @@
+/**
+ * PDF.js Online Reader Styles
+ * Layar Literasi Digital Library
+ */
+
+.reader-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background-color: #525659;
+}
+
+.reader-navbar {
+  background-color: #101c34;
+  color: #ffffff;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #1e293b;
+  z-index: 100;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.reader-book-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  max-width: 380px;
+}
+
+.reader-book-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  color: #ffffff;
+}
+
+.reader-book-author {
+  font-size: 0.78rem;
+  color: #94a3b8;
+  margin: 0;
+}
+
+.reader-controls-center {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: rgba(255, 255, 255, 0.08);
+  padding: 4px 12px;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.reader-btn {
+  background: transparent;
+  border: none;
+  color: #e2e8f0;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.reader-btn:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+}
+
+.reader-btn.active {
+  background-color: #f97316;
+  color: #ffffff;
+}
+
+.reader-page-indicator {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: #cbd5e1;
+}
+
+.reader-page-input {
+  width: 48px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  border-radius: 6px;
+  padding: 2px 4px;
+  font-weight: 600;
+  font-size: 0.88rem;
+}
+
+.reader-page-input:focus {
+  outline: 2px solid #f97316;
+}
+
+.reader-main-area {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+}
+
+.reader-sidebar {
+  width: 320px;
+  background-color: #1e293b;
+  color: #f8fafc;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #334155;
+  transition: transform 0.3s ease, margin-left 0.3s ease;
+  z-index: 90;
+}
+
+.reader-sidebar.collapsed {
+  margin-left: -320px;
+}
+
+.reader-sidebar-tabs {
+  display: flex;
+  border-bottom: 1px solid #334155;
+}
+
+.reader-sidebar-tab {
+  flex: 1;
+  padding: 12px;
+  text-align: center;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #94a3b8;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.reader-sidebar-tab.active {
+  color: #f97316;
+  border-bottom: 2px solid #f97316;
+  background: rgba(249, 115, 22, 0.05);
+}
+
+.reader-sidebar-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px;
+}
+
+.reader-viewport {
+  flex: 1;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 15px;
+  background-color: #383c40;
+}
+
+.pdf-canvas-container {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  background-color: #ffffff;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+#pdf-canvas {
+  display: block;
+}
+
+.reader-progress-strip {
+  height: 4px;
+  background-color: #1e293b;
+  width: 100%;
+}
+
+.reader-progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #2563eb, #f97316);
+  width: 0%;
+  transition: width 0.3s ease;
+}
+
+.bookmark-item {
+  background-color: #0f172a;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.bookmark-item:hover {
+  border-color: #f97316;
+  background-color: #1e293b;
+}
+
+.bookmark-page {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #f97316;
+  margin-bottom: 4px;
+}
+
+.bookmark-note {
+  font-size: 0.85rem;
+  color: #cbd5e1;
+  margin: 0;
+}
+
+.reader-badge-save {
+  font-size: 0.75rem;
+  padding: 4px 8px;
+  border-radius: 9999px;
+  background: rgba(16, 185, 129, 0.2);
+  color: #34d399;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
